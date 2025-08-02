@@ -10,25 +10,28 @@
     <!--CABEÇALHO -->
     <header>
         <nav>
-            <div>MiniMercado</div>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li>
-                    <a href="#">Produtos</a>
-                    <ul>
-                        <li><a href="/frutas-e-verduras.html">Frutas e Verduras</a></li>
-                        <li><a href="#">Não Perecíveis</a></li>
-                        <li><a href="#">Higiene</a></li>
-                    </ul>
-                </li>
-                <li><a href="/servicos.html">Serviços</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">🛒 Carrinho</a></li>
-            </ul>
-            <div class="auth">
-                <a href="">Login</a> |
-                <a href="">Cadastre-se</a>
+            <div class="nav-container">
+                <div class="logo">MiniMercado</div>
+
+                <ul class="menu">
+                    <li><a href="#">Início</a></li>
+                    <li>
+                        <a href="#">Categorias</a>
+                        <ul>
+                            <li><a href="frutas-e-verduras.html">Frutas e Verduras</a></li>
+                            <li><a href="nao-pereciveis.html">Não Perecíveis</a></li>
+                            <li><a href="higiene.html">Higiene</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">🛒 Carrinho</a></li>
+                </ul>
+
+                <div>
+                    <a href="">Login</a> 
+                    <a href="">Cadastre-se</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -37,6 +40,21 @@
     <main>
 
         <section>
+            <!--frutas e verduras -->
+            <h2>Frutas e Verduras</h2>
+            <div>
+                <img src="banana.jpg" alt="Banana">
+                <p>Banana</p>
+                <p>R$ 3,50/kg</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div>
+                <img src="alface.jpg" alt="Alface">
+                <p>Alface</p>
+                <p>R$ 2,00</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+
             <!--alimentos não perecíveis -->
             <h2>Alimentos Não Perecíveis</h2>
             <div>
@@ -49,6 +67,21 @@
                 <img src="feijao.jpg" alt="Feijão">
                 <p>Feijão 1kg</p>
                 <p>R$ 7,00</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+
+            <!--Higiene e Limpeza -->
+            <h2>Higiene e Limpeza</h2>
+            <div>
+                <img src="sabao.jpg" alt="Sabão">
+                <p>Sabão em barra</p>
+                <p>R$ 1,50</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div>
+                <img src="detergente.jpg" alt="Detergente">
+                <p>Detergente</p>
+                <p>R$ 2,50</p>
                 <button>Adicionar ao Carrinho</button>
             </div>
         </section>
