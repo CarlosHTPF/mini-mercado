@@ -28,7 +28,7 @@
                 </ul>
 
                 <div>
-                    <a href="">Login</a> 
+                    <a href="">Login</a>
                     <a href="">Cadastre-se</a>
                 </div>
             </div>
@@ -38,55 +38,39 @@
     <!--CONTEUDO -->
     <main>
 
-        <section id="produtos">
-            <!--frutas e verduras -->
-            <h2>Frutas e Verduras</h2>
+        <section>
             <div>
-                <img src="banana.jpg">
-                <p>Banana</p>
-                <p>R$ 3,50/kg</p>
-                <button>Adicionar ao Carrinho</button>
+                <!--informações de contato -->
+                <h2>Informações de Contato</h2>
+                <p><strong>Endereço:</strong> Av. Independência - Centro, Porto Alegre - RS</p>
+                <p><strong>Telefone:</strong> (51) 9999-9999</p>
+                <p><strong>E-mail:</strong> cliente@gmail.com</p>
+                <p><strong>Horário de Atendimento:</strong><br>
+                    Segunda a Sábado, das 8h às 18h
+                </p>
+                <p><strong>Siga-nos:</strong>
+                    <a href="">Instagram</a>
+                    <a href="">Facebook</a>
+                </p>
+
+                <!--mapa -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3454.260606936216!2d-51.2165359370151!3d-30.029380451761057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1754528751754!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
             <div>
-                <img src="alface.jpg">
-                <p>Alface</p>
-                <p>R$ 2,00</p>
-                <button>Adicionar ao Carrinho</button>
+                <!--formulario de contato -->
+                <form>
+                    <input type="text" placeholder='Nome' />
+                    <input type="text" placeholder='Email' />
+                    <textarea cols={30} rows={10} placeholder='Mensagem'></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
             </div>
 
-            <hr>
 
-            <!--alimentos não perecíveis -->
-            <h2>Alimentos Não Perecíveis</h2>
-            <div>
-                <img src="arroz.jpg">
-                <p>Arroz 5kg</p>
-                <p>R$ 20,00</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-            <div>
-                <img src="feijao.jpg">
-                <p>Feijão 1kg</p>
-                <p>R$ 7,00</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-
-            <hr>
-
-            <!--Higiene e Limpeza -->
-            <h2>Higiene e Limpeza</h2>
-            <div>
-                <img src="sabao.jpg">
-                <p>Sabão em barra</p>
-                <p>R$ 1,50</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-            <div>
-                <img src="detergente.jpg">
-                <p>Detergente</p>
-                <p>R$ 2,50</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
         </section>
     </main>
 
@@ -110,7 +94,7 @@
         <div>
             <h2>Links Rápidos</h2>
             <nav>
-                <a href="#produtos">Produtos</a> |
+                <a href="/mini-mercado/index.html">Produtos</a> |
                 <a href="/mini-mercado/template/servicos.html">Serviços</a> |
                 <a href="/mini-mercado/template/contato.html">Contato</a>
             </nav>
@@ -127,4 +111,5 @@
         </div>
     </footer>
 </body>
+
 </html>

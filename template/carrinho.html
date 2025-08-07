@@ -28,7 +28,7 @@
                 </ul>
 
                 <div>
-                    <a href="">Login</a> 
+                    <a href="">Login</a>
                     <a href="">Cadastre-se</a>
                 </div>
             </div>
@@ -38,55 +38,35 @@
     <!--CONTEUDO -->
     <main>
 
-        <section id="produtos">
-            <!--frutas e verduras -->
-            <h2>Frutas e Verduras</h2>
-            <div>
-                <img src="banana.jpg">
-                <p>Banana</p>
-                <p>R$ 3,50/kg</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-            <div>
-                <img src="alface.jpg">
-                <p>Alface</p>
-                <p>R$ 2,00</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
+        <section>
+            <main>
+                <h2>Meu Carrinho</h2>
 
-            <hr>
+                <!-- Produto no carrinho -->
+                <div>
+                    <img src="banana.jpg" alt="Banana" width="80">
+                    <div>
+                        <p><strong>Banana</strong></p>
+                        <p>Preço: R$ 3,50</p>
+                        <label>Quantidade:
+                            <input type="number" value="2" min="1">
+                        </label>
+                        <p>Subtotal: R$ 7,00</p>
+                        <button>Remover</button>
+                    </div>
+                </div>
 
-            <!--alimentos não perecíveis -->
-            <h2>Alimentos Não Perecíveis</h2>
-            <div>
-                <img src="arroz.jpg">
-                <p>Arroz 5kg</p>
-                <p>R$ 20,00</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-            <div>
-                <img src="feijao.jpg">
-                <p>Feijão 1kg</p>
-                <p>R$ 7,00</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
+                <!-- Resumo da compra -->
+                <div>
+                    <h3>Resumo da compra</h3>
+                    <p>Subtotal: R$ 7,00</p>
+                    <p>Entrega: R$ 5,00</p>
+                    <p><strong>Total: R$ 12,00</strong></p>
+                    <button>Finalizar Pedido</button>
+                </div>
+            </main>
 
-            <hr>
 
-            <!--Higiene e Limpeza -->
-            <h2>Higiene e Limpeza</h2>
-            <div>
-                <img src="sabao.jpg">
-                <p>Sabão em barra</p>
-                <p>R$ 1,50</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-            <div>
-                <img src="detergente.jpg">
-                <p>Detergente</p>
-                <p>R$ 2,50</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
         </section>
     </main>
 
@@ -110,7 +90,7 @@
         <div>
             <h2>Links Rápidos</h2>
             <nav>
-                <a href="#produtos">Produtos</a> |
+                <a href="/mini-mercado/index.html">Produtos</a> |
                 <a href="/mini-mercado/template/servicos.html">Serviços</a> |
                 <a href="/mini-mercado/template/contato.html">Contato</a>
             </nav>
@@ -127,4 +107,5 @@
         </div>
     </footer>
 </body>
+
 </html>
