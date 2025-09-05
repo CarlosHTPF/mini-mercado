@@ -80,10 +80,16 @@ header {
 footer{
   background: #2c3e50;
   color: white;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 
 footer h5{
   color: #f1c40f;
   text-decoration: none;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
 }
