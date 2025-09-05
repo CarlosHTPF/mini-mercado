@@ -11,13 +11,16 @@
 <body>
     <!--CABEÇALHO -->
     <header>
-        <nav>
-            <div>MiniMercado Independência</div>
-            <ul>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/mini-mercado/index.html">MiniMercado <span>Independência</span></a>
+            </div>
+
+            <ul class="menu">
                 <li><a href="/mini-mercado/index.html">Início</a></li>
-                <li>
-                    <a>Categorias</a>
-                    <ul>
+                <li class="dropdown">
+                    <a href="#">Categorias ▾</a>
+                    <ul class="submenu">
                         <li><a href="/mini-mercado/template/frutas-e-verduras.html">Frutas e Verduras</a></li>
                         <li><a href="/mini-mercado/template/nao-pereciveis.html">Não Perecíveis</a></li>
                         <li><a href="/mini-mercado/template/higiene.html">Higiene</a></li>
@@ -27,9 +30,10 @@
                 <li><a href="/mini-mercado/template/contato.html">Contato</a></li>
                 <li><a href="/mini-mercado/template/carrinho.html">🛒 Carrinho</a></li>
             </ul>
-            <div>
-                <a href="">Login</a> 
-                <a href="">Cadastre-se</a>
+
+            <div class="auth">
+                <button href="#" type="button" class="btn btn-dark">Login</button>
+                <button href="#" type="button" class="btn btn-light">Cadastre-se</button>
             </div>
         </nav>
     </header>
