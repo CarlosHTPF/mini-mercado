@@ -71,14 +71,3 @@ header {
 .dropdown:hover .submenu {
   display: block;
 }
-
-.auth a {
-  margin-left: 15px;
-  color: #f1c40f;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.auth a:hover {
-  text-decoration: underline;
-}
