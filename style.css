@@ -83,12 +83,12 @@ header {
   font-size: 0.8rem;
 }
 
-.footer .h5{
+.footer h5{
   color: #f1c40f;
   text-decoration: none;
 }
 
-.section .h2 {
+.section h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #f1c40f;
