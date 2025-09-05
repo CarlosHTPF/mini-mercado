@@ -93,3 +93,13 @@ header {
   margin-bottom: 20px;
   color: #f1c40f;
 }
+
+/*icons*/
+.social-icons a i {
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover i {
+    color: #f1c40f;
+}
