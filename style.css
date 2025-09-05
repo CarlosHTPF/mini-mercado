@@ -37,6 +37,7 @@ header {
   list-style: none;
   display: flex;
   gap: 20px;
+  font-size: 1em;
 }
 
 .menu a {
@@ -73,5 +74,5 @@ header {
 }
 
 .auth {
-  gap: 20px;
+  gap: 35px;
 }
