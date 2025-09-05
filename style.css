@@ -76,3 +76,7 @@ header {
 .auth {
   gap: 35px;
 }
+
+footer {
+  font-size: 0.85rem; /* menor que o padrão */
+}
