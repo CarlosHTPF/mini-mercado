@@ -111,6 +111,7 @@ header {
 
 .card {
   min-height: 300px;
+  padding: 20px;
 }
 
 main h2 {
