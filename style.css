@@ -118,13 +118,13 @@ main h2 {
   color: #f1c40f;
 }
 
-.carousel-item {
-    aspect-ratio: 21 / 9; /* ou 4/3, 21/9 */
-    overflow: hidden;
-}
-
 .carousel-inner img {
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
+}
+
+#promoCarousel {
+    max-width: 1200px;
+    margin: 0 auto;
 }
