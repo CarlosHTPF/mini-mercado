@@ -219,7 +219,7 @@ main h2 {
 }
 
 /* Botão */
-button {
+.container-form button {
   width: 100%;
   padding: 12px;
   background: #f1c40f; 
