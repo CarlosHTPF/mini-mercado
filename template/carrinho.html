@@ -42,38 +42,47 @@
     </header>
 
     <!--CONTEUDO -->
-    <main>
+    <main class="container my-5">
+        <h2 class="text-center mb-5 text-warning">🛒 Meu Carrinho</h2>
 
-        <section>
-            <main>
-                <h2>Meu Carrinho</h2>
+        <div class="row">
+            <!-- Lista de produtos -->
+            <div class="col-md-8">
+                <div class="card mb-3 shadow-sm">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-md-3">
+                            <img src="/mini-mercado/imagens/banana.avif" class="img-fluid p-2" alt="Banana">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Banana</h5>
+                                <p class="card-text">Preço: <strong>R$ 3,50</strong></p>
 
-                <!-- Produto no carrinho -->
-                <div>
-                    <img src="/mini-mercado/imagens/banana.avif" alt="Banana">
-                    <div>
-                        <p><strong>Banana</strong></p>
-                        <p>Preço: R$ 3,50</p>
-                        <label>Quantidade:
-                            <input type="number" value="" min="1">
-                        </label>
-                        <p>Subtotal:</p>
-                        <button>Remover</button>
+                                <div class="d-flex align-items-center mb-2">
+                                    <label class="mr-2">Quantidade:</label>
+                                    <input type="number" class="form-control w-25" value="1" min="1">
+                                </div>
+
+                                <p class="card-text">Subtotal: <strong>R$ 3,50</strong></p>
+                                <button class="btn btn-sm btn-danger">Remover</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Resumo da compra -->
-                <div>
-                    <h3>Resumo da compra</h3>
-                    <p>Subtotal: </p>
-                    <p>Entrega: R$ 5,00</p>
-                    <p><strong>Total:</strong></p>
-                    <button>Finalizar Pedido</button>
+            <!-- Resumo da compra -->
+            <div class="col-md-4">
+                <div class="card shadow p-3">
+                    <h4 class="text-center text-warning">Resumo da Compra</h4>
+                    <hr>
+                    <p>Subtotal: <span class="float-right">R$ 3,50</span></p>
+                    <p>Entrega: <span class="float-right">R$ 5,00</span></p>
+                    <p class="font-weight-bold">Total: <span class="float-right">R$ 8,50</span></p>
+                    <button class="btn btn-success btn-block mt-3">Finalizar Pedido</button>
                 </div>
-            </main>
-
-
-        </section>
+            </div>
+        </div>
     </main>
 
     <!-- RODAPÉ -->
