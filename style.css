@@ -107,5 +107,13 @@ header {
 .avisos {
     color: #fff;
     padding: 15px;
-    margin-right: 35px;
+    margin-right: 10px;
+}
+
+.card {
+  min-height: 300px;
+}
+
+main h2 {
+  color: #f1c40f;
 }
