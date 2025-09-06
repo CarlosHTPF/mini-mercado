@@ -36,38 +36,42 @@
             </ul>
 
             <div class="auth">
-               <a href="/mini-mercado/template/login.html"><button type="button" class="btn btn-dark">Login</button></a>
-               <a href="/mini-mercado/template/cadastro.html"><button type="button" class="btn btn-light">Cadastre-se</button></a>
+                <a href="/mini-mercado/template/login.html"><button type="button"
+                        class="btn btn-dark">Login</button></a>
+                <a href="/mini-mercado/template/cadastro.html"><button type="button"
+                        class="btn btn-light">Cadastre-se</button></a>
             </div>
         </nav>
     </header>
 
 
+
+    <!-- Carrossel de Promoções -->
+    <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="imagens/promo1.jpg" class="d-block w-100" alt="Promoção 1">
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/promo2.jpg" class="d-block w-100" alt="Promoção 2">
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/promo3.jpg" class="d-block w-100" alt="Promoção 3">
+            </div>
+        </div>
+
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+
     <!--CONTEUDO -->
     <main class="container my-5">
-
-        <!-- Carrossel de Promoções -->
-        <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="imagens/promo1.jpg" class="d-block w-100" alt="Promoção 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="imagens/promo2.jpg" class="d-block w-100" alt="Promoção 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="imagens/promo3.jpg" class="d-block w-100" alt="Promoção 3">
-                </div>
-            </div>
-
-            <!-- Controles -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
         <!-- Frutas e Verduras -->
         <section class="section mb-5">
             <h2 class="mb-4">Frutas e Verduras</h2>
