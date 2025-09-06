@@ -118,7 +118,7 @@ header {
 .card {
   height: 500px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 14px;
 }
 
 main h2 {
@@ -136,6 +136,7 @@ main h2 {
 #promoCarousel {
   margin: 10px auto;
   width: 1600px;
+  border-radius: 14px;
 }
 
 /*ajuste comando*/
