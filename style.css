@@ -282,8 +282,12 @@ main h2 {
 .carrinho {
   height: auto;
   min-height: 500px;
+}
+
+.fix{
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 .descricao-card {
