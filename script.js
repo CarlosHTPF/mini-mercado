@@ -1,5 +1,5 @@
 // Função personalizada para inicializar e controlar o carrossel
-function iniciarCarrossel(intervalo = 4000) {
+function iniciarCarrossel(intervalo = 2800) {
   const carouselElement = document.querySelector('#promoCarousel');
 
   if (!carouselElement) {
@@ -22,5 +22,5 @@ function iniciarCarrossel(intervalo = 4000) {
 
 // Ativa quando a página terminar de carregar
 document.addEventListener("DOMContentLoaded", () => {
-  iniciarCarrossel(4000); // começa com 4 segundos por slide
+  iniciarCarrossel(2800);
 });
