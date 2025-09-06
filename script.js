@@ -1,5 +1,5 @@
 // Função personalizada para inicializar e controlar o carrossel
-function iniciarCarrossel(intervalo = 3000) {
+function iniciarCarrossel(intervalo = 4000) {
   const carouselElement = document.querySelector('#promoCarousel');
 
   if (!carouselElement) {
@@ -15,7 +15,7 @@ function iniciarCarrossel(intervalo = 3000) {
   setTimeout(() => {
     carouselElement.setAttribute('data-bs-interval', '2000');
     console.log("Intervalo alterado para 2s!");
-  }, 10000);
+  }, 15000);
 
   return carousel;
 }
