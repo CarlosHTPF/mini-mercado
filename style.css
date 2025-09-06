@@ -90,10 +90,6 @@ header {
   text-decoration: none;
 }
 
-.section {
-  margin-top: 20px;
-}
-
 .section h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -134,22 +130,23 @@ main h2 {
 }
 
 #promoCarousel {
-  margin: 10px auto;
+  margin: 15px auto;
   width: 1600px;
-  border-radius: 14px;
 }
 
 /*ajuste comando*/
 .carousel-control-prev,
 .carousel-control-next {
-  background: transparent !important;
-  border: none;
-  width: 60px;
-  height: 70px;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
 .carousel-control-prev:hover,
