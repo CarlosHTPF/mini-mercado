@@ -140,13 +140,11 @@ main h2 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0);
   color: white;
-  border: none;
   font-size: 2rem;
   padding: 10px;
   cursor: pointer;
-  border-radius: 50%;
 }
 
 .carousel-control-prev:hover,
