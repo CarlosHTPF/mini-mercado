@@ -122,13 +122,14 @@ main h2 {
 .carousel-inner img {
     width: 100%;
     height: 300px;
-    object-fit: contain;
+    object-fit: cover;
     background: #fff;
 }
 
 #promoCarousel {
     max-width: 1200px;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 /*ajuste comando*/
