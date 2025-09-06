@@ -113,8 +113,13 @@ header {
 
 .card {
   height: 500px;
-  padding: 20px;
   border-radius: 14px;
+  overflow: hidden;
+}
+
+.card img {
+  height: 250px;
+  object-fit: cover;
 }
 
 main h2 {
@@ -131,7 +136,8 @@ main h2 {
 
 #promoCarousel {
   margin: 15px auto;
-  width: 1600px;
+  max-width: 1600px;
+  width: 100%;
 }
 
 /*ajuste comando*/
@@ -143,7 +149,7 @@ main h2 {
   background: transparent;
   border: none;
   font-size: 3rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
   transition: color 0.3s;
 }
