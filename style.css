@@ -167,3 +167,67 @@ main h2 {
 .carousel-control-next:hover .carousel-control-next-icon {
     opacity: 1;
 }
+
+/* cadastro */
+.container-form {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 25px;
+  background: #2c3e50;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.container-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f1c40f;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #f1c40f;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #f1c40f;
+  border-radius: 4px;
+  background: #34495e;
+  color: #fff;
+}
+
+.form-control::placeholder {
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+.form-check {
+  margin-bottom: 10px;
+}
+
+.form-check label {
+  color: #fff;
+}
+
+/* Botão */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #f1c40f; 
+  color: #fff;      
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
