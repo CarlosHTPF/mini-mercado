@@ -88,6 +88,9 @@ header {
   text-decoration: none;
 }
 
+.section{
+  margin-top: 20px;
+}
 .section h2 {
   text-align: center;
   margin-bottom: 20px;
