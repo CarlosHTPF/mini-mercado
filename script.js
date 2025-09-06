@@ -13,8 +13,8 @@ function iniciarCarrossel(intervalo = 3000) {
   });
 
   setTimeout(() => {
-    carouselElement.setAttribute('data-bs-interval', '1000');
-    console.log("⏱️ Intervalo alterado para 1s!");
+    carouselElement.setAttribute('data-bs-interval', '2000');
+    console.log("Intervalo alterado para 2s!");
   }, 10000);
 
   return carousel;
