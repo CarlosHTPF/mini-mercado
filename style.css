@@ -132,7 +132,8 @@ main h2 {
 }
 
 #promoCarousel {
-    max-width: 1200px;
+    width: 1600px;
+    text-align: center;
 }
 
 /*ajuste comando*/
