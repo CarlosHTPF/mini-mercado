@@ -1,0 +1,26 @@
+// Função personalizada para inicializar e controlar o carrossel
+function iniciarCarrossel(intervalo = 3000) {
+  const carouselElement = document.querySelector('#promoCarousel');
+
+  if (!carouselElement) {
+    console.warn("Carrossel não encontrado na página.");
+    return;
+  }
+
+  const carousel = new bootstrap.Carousel(carouselElement, {
+    interval: intervalo,
+    ride: 'carousel'
+  });
+
+  setTimeout(() => {
+    carouselElement.setAttribute('data-bs-interval', '1000');
+    console.log("⏱️ Intervalo alterado para 1s!");
+  }, 10000);
+
+  return carousel;
+}
+
+// Ativa quando a página terminar de carregar
+document.addEventListener("DOMContentLoaded", () => {
+  iniciarCarrossel(4000); // começa com 4 segundos por slide
+});
