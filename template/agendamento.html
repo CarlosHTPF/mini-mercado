@@ -45,42 +45,47 @@
 
     <!-- CONTEÚDO -->
     <main>
-        <div class="container mt-4">
-            <h2>Finalizar Pedido - Agendamento</h2>
 
-            <!-- Resumo do Pedido -->
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5>Resumo do Pedido</h5>
-                    <ul id="resumoPedido"></ul>
+        <body>
+            <div class="container mt-4">
+                <h2>Finalizar Pedido - Agendamento</h2>
+
+                <!-- Resumo do Pedido -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5>Resumo do Pedido</h5>
+                        <ul id="resumoPedido"></ul>
+                        <p><strong>Total: R$ <span id="valorTotal">0,00</span></strong></p>
+                    </div>
                 </div>
+
+                <!-- Tipo de serviço -->
+                <div class="form-group">
+                    <label>Escolha o serviço:</label>
+                    <select id="tipoServico" class="form-control">
+                        <option value="retirada">Retirada no local</option>
+                        <option value="entrega">Tele-entrega (+R$ 5,00)</option>
+                    </select>
+                </div>
+
+                <!-- Endereço (se entrega) -->
+                <div id="enderecoEntrega" class="form-group d-none">
+                    <label>Endereço de entrega:</label>
+                    <input type="text" class="form-control" placeholder="Digite o endereço">
+                </div>
+
+                <!-- Slots disponíveis -->
+                <div class="form-group">
+                    <label>Agendamento disponível (próximos 7 dias):</label>
+                    <div id="agenda" class="mt-3"></div>
+                </div>
+
+                <!-- Confirmação -->
+                <button id="btnConfirmar" class="btn btn-success btn-lg btn-block" disabled>Confirmar Pedido</button>
             </div>
 
-            <!-- Tipo de serviço -->
-            <div class="form-group">
-                <label>Escolha o serviço:</label>
-                <select id="tipoServico" class="form-control">
-                    <option value="retirada">Retirada no local</option>
-                    <option value="entrega">Tele-entrega</option>
-                </select>
-            </div>
-
-            <!-- Endereço (se entrega) -->
-            <div id="enderecoEntrega" class="form-group d-none">
-                <label>Endereço de entrega:</label>
-                <input type="text" class="form-control" placeholder="Digite o endereço">
-            </div>
-
-            <!-- Data e Hora -->
-            <div class="form-group">
-                <label>Data e horário do agendamento:</label>
-                <input type="datetime-local" class="form-control" id="dataHoraAgendamento">
-                <small id="avisoHorario" class="text-danger d-none">❌ Esse horário já está ocupado.</small>
-            </div>
-
-            <!-- Confirmação -->
-            <button id="btnConfirmar" class="btn btn-success btn-lg btn-block">Confirmar Pedido</button>
-        </div>
+            <script src="js/checkout.js"></script>
+        </body>
     </main>
 
     <!--RODAPÉ -->
