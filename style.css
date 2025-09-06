@@ -115,6 +115,8 @@ header {
   height: 500px;
   border-radius: 14px;
   overflow: hidden;
+  min-height: 250px;
+  padding: 20px;
 }
 
 .card img {
@@ -242,16 +244,26 @@ main h2 {
 
 /*servicos (card)*/
 .servicos {
-  width: 60px;
-  margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.servicos .display-3 {
+    font-size: 3rem;
 }
 
 .servicos h3 {
-  margin: 10px 0 5px;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    white-space: normal;
 }
 
 .servicos p {
-  margin: 0;
-  text-align: center;
-  font-size: 14px;
+    margin-top: 10px;
+    font-size: 1rem;
+    white-space: normal;
 }
