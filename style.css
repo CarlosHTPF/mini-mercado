@@ -281,4 +281,11 @@ main h2 {
 /*card carrinho*/
 .carrinho {
   height: auto;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.descricao-card {
+  margin-top: auto;
 }
