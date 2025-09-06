@@ -1,49 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Checkout - Agendamento</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Checkout - Agendamento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 </head>
+
 <body>
-  <div class="container mt-4">
-    <h2>Finalizar Pedido - Agendamento</h2>
+    <!-- CABEÇALHO -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/mini-mercado/index.html">MiniMercado <span>Independência</span></a>
+            </div>
 
-    <!-- Resumo do Pedido -->
-    <div class="card mb-4">
-      <div class="card-body">
-        <h5>Resumo do Pedido</h5>
-        <ul id="resumoPedido"></ul>
-      </div>
-    </div>
+            <ul class="menu">
+                <li><a href="/mini-mercado/index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#">Categorias ▾</a>
+                    <ul class="submenu">
+                        <li><a href="/mini-mercado/template/frutas-e-verduras.html">Frutas e Verduras</a></li>
+                        <li><a href="/mini-mercado/template/nao-pereciveis.html">Não Perecíveis</a></li>
+                        <li><a href="/mini-mercado/template/higiene.html">Higiene</a></li>
+                    </ul>
+                </li>
+                <li><a href="/mini-mercado/template/servicos.html">Serviços</a></li>
+                <li><a href="/mini-mercado/template/contato.html">Contato</a></li>
+                <li><a href="/mini-mercado/template/carrinho.html">🛒 Carrinho</a></li>
+            </ul>
 
-    <!-- Tipo de serviço -->
-    <div class="form-group">
-      <label>Escolha o serviço:</label>
-      <select id="tipoServico" class="form-control">
-        <option value="retirada">Retirada no local</option>
-        <option value="entrega">Tele-entrega</option>
-      </select>
-    </div>
+            <div class="auth">
+                <a href="/mini-mercado/template/login.html"><button type="button"
+                        class="btn btn-dark">Login</button></a>
+                <a href="/mini-mercado/template/cadastro.html"><button type="button"
+                        class="btn btn-light">Cadastre-se</button></a>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Endereço (se entrega) -->
-    <div id="enderecoEntrega" class="form-group d-none">
-      <label>Endereço de entrega:</label>
-      <input type="text" class="form-control" placeholder="Digite o endereço">
-    </div>
 
-    <!-- Data e Hora -->
-    <div class="form-group">
-      <label>Data e horário do agendamento:</label>
-      <input type="datetime-local" class="form-control" id="dataHoraAgendamento">
-      <small id="avisoHorario" class="text-danger d-none">❌ Esse horário já está ocupado.</small>
-    </div>
+    <!-- CONTEÚDO -->
+    <main>
+        <div class="container mt-4">
+            <h2>Finalizar Pedido - Agendamento</h2>
 
-    <!-- Confirmação -->
-    <button id="btnConfirmar" class="btn btn-success btn-lg btn-block">Confirmar Pedido</button>
-  </div>
+            <!-- Resumo do Pedido -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5>Resumo do Pedido</h5>
+                    <ul id="resumoPedido"></ul>
+                </div>
+            </div>
 
-  <script src="js/checkout.js"></script>
+            <!-- Tipo de serviço -->
+            <div class="form-group">
+                <label>Escolha o serviço:</label>
+                <select id="tipoServico" class="form-control">
+                    <option value="retirada">Retirada no local</option>
+                    <option value="entrega">Tele-entrega</option>
+                </select>
+            </div>
+
+            <!-- Endereço (se entrega) -->
+            <div id="enderecoEntrega" class="form-group d-none">
+                <label>Endereço de entrega:</label>
+                <input type="text" class="form-control" placeholder="Digite o endereço">
+            </div>
+
+            <!-- Data e Hora -->
+            <div class="form-group">
+                <label>Data e horário do agendamento:</label>
+                <input type="datetime-local" class="form-control" id="dataHoraAgendamento">
+                <small id="avisoHorario" class="text-danger d-none">❌ Esse horário já está ocupado.</small>
+            </div>
+
+            <!-- Confirmação -->
+            <button id="btnConfirmar" class="btn btn-success btn-lg btn-block">Confirmar Pedido</button>
+        </div>
+    </main>
+
+    <!--RODAPÉ -->
+    <footer class="footer bg-dark text-light text-center p-4 mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <h5>Contato</h5>
+                <p>cliente@gmail.com</p>
+                <p>(51) 99999-9999</p>
+                <p>Av. Independência - Porto Alegre, RS</p>
+            </div>
+            <div class="col-md-3">
+                <h5>Sobre</h5>
+                <p>Segunda a Sábado, das 8h às 18h</p>
+                <p>Mercado local com variedade e qualidade.</p>
+            </div>
+            <div class="col-md-3">
+                <h5>Links Rápidos</h5>
+                <a href="/mini-mercado/index.html" class="text-light">Produtos</a><br>
+                <a href="/mini-mercado/template/servicos.html" class="text-light">Serviços</a><br>
+                <a href="/mini-mercado/template/contato.html" class="text-light">Contato</a>
+            </div>
+            <div class="col-md-3">
+                <h5>Redes Sociais</h5>
+                <div class="social-icons d-flex justify-content-center">
+                    <a href="#" class="text-light mx-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-light mx-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-light mx-2"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="bg-light">
+        <p>&copy; 2025 Mercado Independência. Todos os direitos reservados | Desenvolvido por Carlos Henrique Tem-Pass
+            Finger</p>
+    </footer>
+
+
+    <script src="js/checkout.js"></script>
 </body>
+
 </html>
