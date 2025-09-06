@@ -126,7 +126,7 @@ main h2 {
 
 .carousel-inner img {
     width: 100%;
-    height: 250px;
+    height: 150px;
     object-fit: cover;
 }
 
