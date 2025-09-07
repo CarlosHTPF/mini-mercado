@@ -339,6 +339,18 @@ main h2 {
 }
 
 #agenda .card {
-    max-height: 150px; 
+    max-height: 125px; 
     overflow: hidden; 
+}
+
+#agenda .btn {
+    background-color: #ffc107;
+    color: #000;             
+    border-color: #ffc107;     
+}
+
+#agenda .btn.btn-primary {
+    background-color: #ffc107; 
+    color: #fff;
+    border-color: #ffc107;
 }
