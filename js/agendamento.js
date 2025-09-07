@@ -131,6 +131,13 @@ btnConfirmar.addEventListener("click", () => {
   document.getElementById("inputHorario").value = horarioSelecionado;
   document.getElementById("inputTotal").value = total;
 
+  // Monta o resumo do pedido
+  const resumo = itensPedido.map(item =>
+    `${item.nome} (x${item.qtd}) - R$ ${(item.preco * item.qtd).toFixed(2)}`
+  ).join("\n");
+
+  document.getElementById("inputResumo").value = resumo;
+
   // Envia o formulário automaticamente
   document.getElementById("formPedido").submit();
 
