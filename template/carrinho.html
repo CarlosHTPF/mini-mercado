@@ -43,21 +43,20 @@
         </nav>
     </header>
 
-    <!-- CONTEÚDO -->
     <main class="container my-5">
 
         <!-- Carrinho -->
         <section class="card card-carrinho shadow-lg">
             <div class="card-header bg-info text-white">
-                <h4 class="mb-0">🛒 Meu Carrinho</h4>
+                🛒 Meu Carrinho
             </div>
 
             <!-- Tabela de produtos -->
             <div class="card-body p-0">
-                <table class="table table-hover m-0">
-                    <thead class="table-light">
+                <table class="table table-striped table-hover m-0 align-middle text-center">
+                    <thead class="table-dark">
                         <tr>
-                            <th scope="col">Produto</th>
+                            <th scope="col" style="width: 40%">Produto</th>
                             <th scope="col">Preço</th>
                             <th scope="col">Quantidade</th>
                             <th scope="col">Subtotal</th>
@@ -65,7 +64,29 @@
                         </tr>
                     </thead>
                     <tbody id="listaCarrinho">
-                        <!-- Produtos serão preenchidos via JS -->
+                        <!-- Exemplo de item preenchido (JS vai gerar isso) -->
+                        <tr>
+                            <td class="text-start">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/45" alt="Banana" class="produto-img me-2">
+                                    <span>Banana</span>
+                                </div>
+                            </td>
+                            <td><strong>R$ 3,50</strong></td>
+                            <td>
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="btn btn-sm btn-outline-secondary">-</button>
+                                    <span class="fw-bold">1</span>
+                                    <button class="btn btn-sm btn-outline-secondary">+</button>
+                                </div>
+                            </td>
+                            <td><strong>R$ 3,50</strong></td>
+                            <td>
+                                <button class="btn btn-danger btn-sm">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
