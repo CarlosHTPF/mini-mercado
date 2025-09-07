@@ -319,3 +319,7 @@ main h2 {
   padding: 20px;
   background-color: #fff;
 }
+.card-header{
+  border-radius: 14px;
+  margin: 10px;
+}
