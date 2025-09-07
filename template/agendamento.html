@@ -43,30 +43,42 @@
 
     <!-- CONTEÚDO -->
     <main class="container my-5">
-        <h2 class="text-center mb-5 text-warning">📅 Agendamento</h2>
 
+        <!-- Resumo da Compra -->
+        <div class="card shadow-lg mb-4">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0">Resumo da Compra</h4>
+            </div>
+            <div class="card-body">
+                <ul id="lista-itens" class="list-group mb-3"></ul>
+                <h4 class="text-end">Total: R$ <span id="total-compra">0,00</span></h4>
+            </div>
+        </div>
+
+        <!-- Agendamento -->
         <div class="card shadow-lg">
             <div class="card-header bg-warning text-dark">
                 <h4 class="mb-0">Escolha a Forma de Entrega</h4>
             </div>
             <div class="card-body">
+                
                 <!-- Opções de agendamento -->
-                <form>
+                <form id="form-agendamento">
                     <div class="form-group mb-3">
-                        <label for="tipoAgendamento" class="font-weight-bold">Opção:</label>
+                        <label for="tipoAgendamento" class="fw-bold">Opção:</label>
                         <select id="tipoAgendamento" class="form-control">
                             <option value="retirada">Retirada no Local</option>
-                            <option value="entrega">Tele-Entrega</option>
+                            <option value="entrega">Tele-Entrega (+ R$ 5,00)</option>
                         </select>
                     </div>
 
                     <div class="form-group mb-3">
-                        <label for="data" class="font-weight-bold">Data:</label>
+                        <label for="data" class="fw-bold">Data:</label>
                         <input type="date" id="data" class="form-control" required>
                     </div>
 
                     <div class="form-group mb-3">
-                        <label for="hora" class="font-weight-bold">Horário:</label>
+                        <label for="hora" class="fw-bold">Horário:</label>
                         <input type="time" id="hora" class="form-control" required>
                     </div>
 
@@ -75,7 +87,7 @@
                             ⬅ Voltar ao Carrinho
                         </a>
                         <button type="submit" class="btn btn-success btn-lg">
-                            Confirmar Agendamento
+                            Finalizar Pedido ➡
                         </button>
                     </div>
                 </form>

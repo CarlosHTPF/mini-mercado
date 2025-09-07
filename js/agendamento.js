@@ -1,10 +1,3 @@
-// Itens do pedido (mock)
-const itensPedido = [
-  { nome: "Arroz 5kg", preco: 25.90 },
-  { nome: "Feijão 1kg", preco: 8.50 },
-  { nome: "Óleo 900ml", preco: 7.00 }
-];
-
 // Horários base (09:00 até 18:00)
 const horariosBase = [
   "09:00", "10:00", "11:00", "12:00",
@@ -12,7 +5,7 @@ const horariosBase = [
   "17:00", "18:00"
 ];
 
-// Exemplo de horários ocupados (viria do backend)
+// Exemplo de horários ocupados (viria do backend futuramente)
 const horariosOcupados = {
   "2025-09-07": ["10:00", "15:00"],
   "2025-09-08": ["09:00", "14:00"]
@@ -26,12 +19,22 @@ let horarioSelecionado = null;
 const resumoPedido = document.getElementById("resumoPedido");
 const valorTotalSpan = document.getElementById("valorTotal");
 
-itensPedido.forEach(item => {
+// 🔹 Carregar itens do carrinho no localStorage
+let itensPedido = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+// Se carrinho estiver vazio
+if (itensPedido.length === 0) {
   const li = document.createElement("li");
-  li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+  li.textContent = "Nenhum item no carrinho.";
   resumoPedido.appendChild(li);
-  valorBase += item.preco;
-});
+} else {
+  itensPedido.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = `${item.nome} (x${item.qtd}) - R$ ${(item.preco * item.qtd).toFixed(2)}`;
+    resumoPedido.appendChild(li);
+    valorBase += item.preco * item.qtd;
+  });
+}
 
 // Função para atualizar total
 function atualizarTotal() {
@@ -45,7 +48,7 @@ function atualizarTotal() {
 
 // Atualiza valor quando muda o serviço
 document.getElementById("tipoServico").addEventListener("change", function () {
-  const enderecoDiv = document.getElementById("enderecoEntrega");
+  const enderecoDiv = document.getElementById("enderecoEntregaDiv");
   enderecoDiv.classList.toggle("d-none", this.value !== "entrega");
   atualizarTotal();
 });
