@@ -24,3 +24,18 @@ function iniciarCarrossel(intervalo = 2800) {
 document.addEventListener("DOMContentLoaded", () => {
   iniciarCarrossel(2800);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const botoes = document.querySelectorAll(".btn-add");
+
+  botoes.forEach(botao => {
+    botao.addEventListener("click", () => {
+      const nome = botao.getAttribute("data-nome");
+      const preco = parseFloat(botao.getAttribute("data-preco"));
+
+      adicionarAoCarrinho(nome, preco, 1);
+
+      alert(`${nome} adicionado ao carrinho!`);
+    });
+  });
+});
