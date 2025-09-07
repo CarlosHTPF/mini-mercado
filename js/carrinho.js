@@ -1,77 +1,61 @@
-// Adicionar item ao carrinho
-document.querySelectorAll(".btn-add").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const nome = btn.getAttribute("data-nome");
-    const preco = parseFloat(btn.getAttribute("data-preco"));
+// Função para salvar no localStorage
+function salvarCarrinho(itens) {
+  localStorage.setItem("carrinho", JSON.stringify(itens));
+}
 
-    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+// Função para carregar do localStorage
+function carregarCarrinho() {
+  return JSON.parse(localStorage.getItem("carrinho")) || [];
+}
 
-    // Se produto já existe, aumenta quantidade
-    const existente = carrinho.find(item => item.nome === nome);
-    if (existente) {
-      existente.qtd++;
-    } else {
-      carrinho.push({ nome, preco, qtd: 1 });
-    }
+// Renderizar carrinho na tela
+function renderizarCarrinho() {
+  const lista = document.getElementById("listaCarrinho");
+  const totalSpan = document.getElementById("totalCarrinho");
+  let carrinho = carregarCarrinho();
 
-    localStorage.setItem("carrinho", JSON.stringify(carrinho));
-    alert(`${nome} adicionado ao carrinho!`);
-    renderCarrinho(); // Atualiza se estiver na página do carrinho
-  });
-});
-
-// Renderizar carrinho dinamicamente
-function renderCarrinho() {
-  const tabela = document.getElementById("carrinhoItens");
-  if (!tabela) return; // Se não estamos na página do carrinho, não faz nada
-
-  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+  lista.innerHTML = "";
   let total = 0;
 
-  tabela.innerHTML = ""; // Limpa antes de redesenhar
-
   carrinho.forEach((item, index) => {
-    const subtotal = item.preco * item.qtd;
-    total += subtotal;
+    total += item.qtd * item.preco;
 
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${item.nome}</td>
-      <td>R$ ${item.preco.toFixed(2)}</td>
-      <td>
-        <button class="btn btn-sm btn-outline-secondary" onclick="alterarQtd(${index}, -1)">-</button>
-        ${item.qtd}
-        <button class="btn btn-sm btn-outline-secondary" onclick="alterarQtd(${index}, 1)">+</button>
-      </td>
-      <td>R$ ${subtotal.toFixed(2)}</td>
-      <td><button class="btn btn-sm btn-danger" onclick="removerItem(${index})">Remover</button></td>
+    const li = document.createElement("li");
+    li.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
+    li.innerHTML = `
+      <span>${item.nome} (x${item.qtd})</span>
+      <span>R$ ${(item.qtd * item.preco).toFixed(2)}</span>
+      <button class="btn btn-sm btn-danger" onclick="removerItem(${index})">🗑</button>
     `;
-    tabela.appendChild(tr);
+    lista.appendChild(li);
   });
 
-  document.getElementById("carrinhoTotal").textContent = total.toFixed(2);
+  totalSpan.textContent = total.toFixed(2);
 }
 
-// Alterar quantidade de itens
-function alterarQtd(index, delta) {
-  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-  carrinho[index].qtd += delta;
+// Adicionar item ao carrinho
+function adicionarAoCarrinho(nome, preco, qtd = 1) {
+  let carrinho = carregarCarrinho();
 
-  if (carrinho[index].qtd <= 0) {
-    carrinho.splice(index, 1);
+  // Procura item igual
+  let existente = carrinho.find(item => item.nome === nome);
+  if (existente) {
+    existente.qtd += qtd;
+  } else {
+    carrinho.push({ nome, preco, qtd });
   }
 
-  localStorage.setItem("carrinho", JSON.stringify(carrinho));
-  renderCarrinho(); // Atualiza sem recarregar
+  salvarCarrinho(carrinho);
+  renderizarCarrinho();
 }
 
-// Remover item do carrinho
+// Remover item
 function removerItem(index) {
-  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+  let carrinho = carregarCarrinho();
   carrinho.splice(index, 1);
-  localStorage.setItem("carrinho", JSON.stringify(carrinho));
-  renderCarrinho(); // Atualiza sem recarregar
+  salvarCarrinho(carrinho);
+  renderizarCarrinho();
 }
 
-// Chama render ao carregar a página
-document.addEventListener("DOMContentLoaded", renderCarrinho);
+// Inicializa carrinho ao carregar a página
+document.addEventListener("DOMContentLoaded", renderizarCarrinho);

@@ -45,36 +45,26 @@
 
     <!-- CONTEÚDO -->
     <main class="container my-5">
-        <h2 class="text-center mb-5 text-warning">🛒 Meu Carrinho</h2>
-
         <div class="card shadow-lg">
-            <div class="card-header bg-warning text-dark">
-                <h4 class="mb-0">Itens do Carrinho</h4>
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0">Meu Carrinho</h4>
             </div>
-            <div class="card-body d-flex flex-column" style="height: 400px;">
-                <div class="flex-grow-1 overflow-auto mb-3">
-                    <table class="table table-bordered table-striped mt-3 mb-0">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>Produto</th>
-                                <th>Preço</th>
-                                <th>Qtd</th>
-                                <th>Subtotal</th>
-                                <th>Ação</th>
-                            </tr>
-                        </thead>
-                        <tbody id="carrinhoItens"></tbody>
-                    </table>
-                </div>
-                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-auto">
-                    <h4>Total: R$ <span id="carrinhoTotal">0,00</span></h4>
-                    <a href="agendamento.html" class="btn btn-success btn-lg">
-                        Finalizar Pedido
+            <div class="card-body">
+                <ul id="listaCarrinho" class="list-group mb-3"></ul>
+                <h5 class="text-right">Total: R$ <span id="totalCarrinho">0,00</span></h5>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <a href="/mini-mercado/index.html" class="btn btn-outline-secondary">
+                        ⬅ Continuar Comprando
+                    </a>
+                    <a href="/mini-mercado/template/agendamento.html" class="btn btn-success btn-lg">
+                        Finalizar Pedido ➡
                     </a>
                 </div>
             </div>
         </div>
     </main>
+
 
     <!-- RODAPÉ -->
     <footer class="footer bg-dark text-light text-center p-4 mt-5">
