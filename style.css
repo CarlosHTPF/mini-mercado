@@ -303,6 +303,16 @@ main h2 {
 }
 
 .card-agendamento {
-  height: auto;
+  height: 200px;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 20px;
 }
 
+.card-resumo {
+  min-height: 250px;
+  height: auto;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 20px;
+}
