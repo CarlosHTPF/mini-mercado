@@ -45,49 +45,57 @@
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="container my-5">
+
         <!-- Resumo da Compra -->
-        <div class="card h-150 shadow-lg mb-4">
-            <div class="card-header bg-warning text-white">
+        <section class="card shadow-lg mb-4">
+            <div class="card-header bg-warning text-dark">
                 <h4 class="mb-0">Resumo da Compra</h4>
             </div>
-            <div class="cart-footer d-flex justify-content-between">
-                <ul id="resumoPedido" class="list-group mb-3"></ul>
-                <h4 class="text-end">Total: R$ <span id="valorTotal">0,00</span></h4>
+            <div class="card-body d-flex flex-column flex-md-row justify-content-between align-items-start">
+                <ul id="resumoPedido" class="list-group mb-3 mb-md-0 w-100 me-md-3"></ul>
+                <div class="text-end">
+                    <h4>Total: R$ <span id="valorTotal">0,00</span></h4>
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- Agendamento -->
-        <div class="card h-auto shadow-lg">
+        <section class="card shadow-lg">
             <div class="card-header bg-warning text-dark">
                 <h4 class="mb-0">Escolha a Forma de Entrega e Horário</h4>
             </div>
             <div class="card-body">
-                <!-- Opções -->
-                <div class="form-group mb-3">
-                    <label for="tipoServico" class="fw-bold">Opção:</label>
-                    <select id="tipoServico" class="form-control">
+
+                <!-- Opções de Serviço -->
+                <div class="mb-3">
+                    <label for="tipoServico" class="form-label fw-bold">Opção de Serviço:</label>
+                    <select id="tipoServico" class="form-select">
                         <option value="retirada">Retirada no Local</option>
                         <option value="entrega">Tele-Entrega (+ R$ 5,00)</option>
                     </select>
                 </div>
 
-                <!-- Endereço (somente se entrega) -->
-                <div id="enderecoEntregaDiv" class="form-group mb-3 d-none">
-                    <label for="enderecoEntrega" class="fw-bold">Endereço para Entrega:</label>
+                <!-- Endereço -->
+                <div id="enderecoEntregaDiv" class="mb-3 d-none">
+                    <label for="enderecoEntrega" class="form-label fw-bold">Endereço para Entrega:</label>
                     <input type="text" id="enderecoEntrega" class="form-control"
                         placeholder="Digite o endereço completo">
                 </div>
 
                 <!-- Agenda dinâmica -->
-                <h5 class="fw-bold mt-4 mb-3">Selecione o Dia e Horário:</h5>
-                <div id="agenda" class="mt-4"></div>
+                <div class="mt-4">
+                    <h5 class="fw-bold mb-3">Selecione o Dia e Horário:</h5>
+                    <div id="agenda"></div>
+                </div>
 
-
+                <!-- Botão de Finalização -->
                 <div class="mt-4 text-end">
                     <button id="btnConfirmar" class="btn btn-success btn-lg" disabled>Finalizar Pedido ➡</button>
                 </div>
+
             </div>
-        </div>
+        </section>
+
     </main>
 
     <!--RODAPÉ -->
