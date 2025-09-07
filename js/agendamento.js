@@ -59,7 +59,7 @@ function gerarAgenda() {
     const tituloDia = data.toLocaleDateString("pt-BR", { weekday: "long", day: "2-digit", month: "2-digit" });
 
     const card = document.createElement("div");
-    card.classList.add("card", "");
+    card.classList.add("card", "mb-3");
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
 
