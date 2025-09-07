@@ -11,7 +11,7 @@ function carregarCarrinho() {
 // Renderizar carrinho na tela
 function renderizarCarrinho() {
   const lista = document.getElementById("listaCarrinho");
-  const totalSpan = document.getElementById("totalCarrinho");
+  const totalEl = document.getElementById("totalCarrinho");
   let carrinho = carregarCarrinho();
 
   if (!lista || !totalEl) return;
