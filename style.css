@@ -356,32 +356,3 @@ main h2 {
   border-color: #ffc107;
 }
 
-/* Card do carrinho */
-.card-carrinho {
-  max-width: 900px;
-  margin: 0 auto;
-  /* centraliza o card */
-}
-
-/* Tabela do carrinho */
-.card-carrinho {
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.card-header {
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-.table td,
-.table th {
-  vertical-align: middle;
-}
-
-.produto-img {
-  width: 45px;
-  height: 45px;
-  object-fit: cover;
-  border-radius: 8px;
-}
