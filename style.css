@@ -280,8 +280,8 @@ main h2 {
 
 /*card carrinho*/
 .cart-container {
-    position: relative;
-    padding-bottom: 70px;
+  position: relative;
+  padding-bottom: 70px;
 }
 
 .cart-footer {
@@ -304,21 +304,36 @@ main h2 {
 
 /* Card Resumo */
 .card-resumo {
-    max-height: 400px;
-    display: flex;
-    flex-direction: column;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-body-resumo {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .resumo-lista {
-    max-height: 200px;
-    overflow-y: auto;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .total-resumo {
-    flex-shrink: 0;
-    font-weight: bold;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+/*card data*/
+.card-agendamento {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body-agendamento {
+  display: flex;
+  flex-direction: column;
+}
+
+.botao-finalizar-container {
+  flex-shrink: 0;
 }

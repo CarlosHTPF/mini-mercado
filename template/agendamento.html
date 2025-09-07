@@ -66,7 +66,9 @@
             <div class="card-header card-header-agendamento bg-warning text-dark">
                 <h4 class="mb-0">Escolha a Forma de Entrega e Horário</h4>
             </div>
-            <div class="card-body card-body-agendamento">
+
+            <!-- Body -->
+            <div class="card-body card-body-agendamento p-3">
 
                 <!-- Opções de Serviço -->
                 <div class="mb-3 form-grupo-servico">
@@ -85,20 +87,19 @@
                 </div>
 
                 <!-- Agenda dinâmica -->
-                <div class="mt-4 agenda-container">
+                <div class="agenda-container mb-3">
                     <h5 class="fw-bold mb-3">Selecione o Dia e Horário:</h5>
                     <div id="agenda" class="agenda-dias"></div>
                 </div>
 
-                <!-- Botão de Finalização -->
-                <div class="mt-4 text-end botao-finalizar-container">
-                    <button id="btnConfirmar" class="btn btn-success btn-lg btn-finalizar" disabled>Finalizar Pedido
-                        ➡</button>
-                </div>
+            </div>
 
+            <!-- Footer com botão de finalizar -->
+            <div class="card-footer botao-finalizar-container bg-light d-flex justify-content-end">
+                <button id="btnConfirmar" class="btn btn-success btn-lg btn-finalizar" disabled>Finalizar Pedido
+                    ➡</button>
             </div>
         </section>
-
     </main>
 
 
