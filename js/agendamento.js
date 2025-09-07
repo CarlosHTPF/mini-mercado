@@ -70,6 +70,8 @@ function gerarAgenda() {
     const horariosDiv = document.createElement("div");
     horariosDiv.classList.add("d-flex", "flex-wrap");
 
+    const ehDomingo = data.getDay() === 0;
+
     horariosBase.forEach(hora => {
       const btn = document.createElement("button");
       btn.classList.add("btn", "m-1");
