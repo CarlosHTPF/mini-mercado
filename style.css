@@ -188,10 +188,14 @@ main h2 {
 }
 
 .container-form h2 {
+  margin: -25px -25px 20px -25px;
+  padding: 15px;
+  background: #f1c40f;
+  color: #34495e;
   text-align: center;
-  margin-bottom: 20px;
-  color: #f1c40f;
+  border-radius: 8px 8px 0 0;
 }
+
 
 
 .form-group {
@@ -289,6 +293,16 @@ main h2 {
   margin: 0 auto;
 }
 
+.card-carrinho .card-header {
+  margin: -20px -20px 20px -20px;
+  padding: 15px;
+  background: #f1c40f;
+  color: #34495e;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 8px 8px 0 0;
+}
+
 /* Tabela do carrinho */
 .card-carrinho table {
   margin-bottom: 0;
@@ -375,6 +389,5 @@ main h2 {
 
 .btn-site:hover {
   background-color: #d4ac0d !important;
-  /* versão mais escura */
   border-color: #d4ac0d !important;
 }
