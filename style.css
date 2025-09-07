@@ -395,3 +395,16 @@ main h2 {
   background-color: #d4ac0d !important;
   border-color: #d4ac0d !important;
 }
+
+/* Botão Login */
+.btn-login {
+  background-color: #f1c40f !important;
+  color: #34495e !important;
+  border: none !important;
+  font-weight: bold;
+}
+
+.btn-login:hover {
+  background-color: #d4ac0d !important;
+  color: #fff !important;
+}

@@ -115,11 +115,26 @@ btnConfirmar.addEventListener("click", () => {
     return;
   }
 
-  document.getElementById("modalServico").textContent = tipoServico === "entrega" ? "Tele-entrega" : "Retirada no local";
-  document.getElementById("modalEndereco").textContent = tipoServico === "entrega" ? endereco : "Mercado Independência";
+  // Preenche o modal
+  document.getElementById("modalServico").textContent =
+    tipoServico === "entrega" ? "Tele-entrega" : "Retirada no local";
+  document.getElementById("modalEndereco").textContent =
+    tipoServico === "entrega" ? endereco : "Mercado Independência";
   document.getElementById("modalHorario").textContent = horarioSelecionado;
   document.getElementById("modalTotal").textContent = total;
 
+  // Preenche o formulário escondido
+  document.getElementById("inputServico").value =
+    tipoServico === "entrega" ? "Tele-entrega" : "Retirada no local";
+  document.getElementById("inputEndereco").value =
+    tipoServico === "entrega" ? endereco : "Mercado Independência";
+  document.getElementById("inputHorario").value = horarioSelecionado;
+  document.getElementById("inputTotal").value = total;
+
+  // Envia o formulário automaticamente
+  document.getElementById("formPedido").submit();
+
+  // Abre o modal de confirmação
   const modal = new bootstrap.Modal(document.getElementById("modalConfirmacao"));
   modal.show();
 

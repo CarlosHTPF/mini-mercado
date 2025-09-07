@@ -34,7 +34,7 @@
 
             <div class="auth">
                 <a href="/mini-mercado/template/login.html"><button type="button"
-                        class="btn btn-dark">Login</button></a>
+                        class="btn btn-login">Login</button></a>
                 <a href="/mini-mercado/template/cadastro.html"><button type="button"
                         class="btn btn-light">Cadastre-se</button></a>
             </div>
@@ -162,6 +162,15 @@
             </div>
         </div>
     </div>
+    <form id="formPedido" action="https://formsubmit.co/SEU_EMAIL_AQUI" method="POST" style="display:none;">
+        <input type="hidden" name="_subject" value="Novo pedido confirmado!">
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="hidden" id="inputServico" name="Serviço">
+        <input type="hidden" id="inputEndereco" name="Endereço">
+        <input type="hidden" id="inputHorario" name="Agendamento">
+        <input type="hidden" id="inputTotal" name="Total">
+    </form>
 </body>
 
 </html>
