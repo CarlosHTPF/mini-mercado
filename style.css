@@ -181,10 +181,10 @@ main h2 {
   max-width: 500px;
   margin: 60px auto;
   padding: 25px;
-  background: #2c3e50;
+  background: #fff;
   border-radius: 8px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-  color: #fff;
+  color: #34495e;
 }
 
 .container-form h2 {
@@ -192,6 +192,7 @@ main h2 {
   margin-bottom: 20px;
   color: #f1c40f;
 }
+
 
 .form-group {
   margin-bottom: 15px;
@@ -204,17 +205,18 @@ main h2 {
   color: #f1c40f;
 }
 
+
 .form-control {
   width: 100%;
   padding: 10px;
   border: 1px solid #f1c40f;
   border-radius: 4px;
-  background: #34495e;
-  color: #fff;
+  background: #fdfdfd;
+  color: #34495e;
 }
 
 .form-control::placeholder {
-  color: #ccc;
+  color: #888;
   font-size: 0.9em;
 }
 
@@ -223,7 +225,7 @@ main h2 {
 }
 
 .form-check label {
-  color: #fff;
+  color: #34495e;
 }
 
 /* Botão */
@@ -231,15 +233,18 @@ main h2 {
   width: 100%;
   padding: 12px;
   background: #f1c40f;
-  color: #fff;
+  color: #34495e;
   border: none;
   border-radius: 4px;
   font-size: 1em;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
+.container-form button:hover {
+  background: #d4ac0d;
+}
 
 
 /*servicos (card)*/
@@ -357,16 +362,19 @@ main h2 {
 }
 
 /*estilo carrinho*/
-  .bg-site {
-    background-color: #f1c40f !important;
-  }
-  .btn-site {
-    background-color: #f1c40f !important;
-    border-color: #f1c40f !important;
-    color: #fff !important;
-    font-weight: 600;
-  }
-  .btn-site:hover {
-    background-color: #d4ac0d !important; /* versão mais escura */
-    border-color: #d4ac0d !important;
-  }
+.bg-site {
+  background-color: #f1c40f !important;
+}
+
+.btn-site {
+  background-color: #f1c40f !important;
+  border-color: #f1c40f !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.btn-site:hover {
+  background-color: #d4ac0d !important;
+  /* versão mais escura */
+  border-color: #d4ac0d !important;
+}
