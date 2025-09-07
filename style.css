@@ -356,3 +356,17 @@ main h2 {
   border-color: #ffc107;
 }
 
+/*estilo carrinho*/
+  .bg-site {
+    background-color: #f1c40f !important;
+  }
+  .btn-site {
+    background-color: #f1c40f !important;
+    border-color: #f1c40f !important;
+    color: #fff !important;
+    font-weight: 600;
+  }
+  .btn-site:hover {
+    background-color: #d4ac0d !important; /* versão mais escura */
+    border-color: #d4ac0d !important;
+  }
