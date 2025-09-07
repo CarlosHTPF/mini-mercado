@@ -302,24 +302,23 @@ main h2 {
   font-weight: bold;
 }
 
-.card-agendamento {
-  min-height: 400px;
-  height: auto;
-  border-radius: 14px;
-  overflow: hidden;
-  padding: 20px;
-  background-color: #fff;
+/* Card Resumo */
+.card-resumo {
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
-.card-resumo {
-  min-height: 250px;
-  height: auto;
-  border-radius: 14px;
-  overflow: hidden;
-  padding: 20px;
-  background-color: #fff;
+.card-body-resumo {
+    flex: 1 1 auto;
 }
-.card-header{
-  border-radius: 14px;
-  padding: 20px;
+
+.resumo-lista {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.total-resumo {
+    flex-shrink: 0;
+    font-weight: bold;
 }

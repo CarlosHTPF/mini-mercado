@@ -44,17 +44,20 @@
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="container my-5">
 
-        <!-- Resumo da Compra -->
         <section class="card card-resumo shadow-lg mb-4">
             <div class="card-header card-header-resumo bg-warning text-dark">
                 <h4 class="mb-0">Resumo da Compra</h4>
             </div>
-            <div
-                class="card-body card-body-resumo d-flex flex-column flex-md-row justify-content-between align-items-start">
-                <ul id="resumoPedido" class="list-group resumo-lista mb-3 mb-md-0 w-100 me-md-3"></ul>
-                <div class="text-end total-resumo">
-                    <h4>Total: R$ <span id="valorTotal">0,00</span></h4>
-                </div>
+
+            <!-- Lista de itens -->
+            <div class="card-body card-body-resumo p-0">
+                <ul id="resumoPedido" class="list-group resumo-lista m-0 p-2 overflow-auto"></ul>
+            </div>
+
+            <!-- Footer com total fixo -->
+            <div class="card-footer total-resumo bg-light d-flex justify-content-between align-items-center">
+                <h5>Total:</h5>
+                <h5>R$ <span id="valorTotal">0,00</span></h5>
             </div>
         </section>
 
