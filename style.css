@@ -307,6 +307,7 @@ main h2 {
   border-radius: 14px;
   overflow: hidden;
   padding: 20px;
+  background-color: #fff;
 }
 
 .card-resumo {
@@ -315,4 +316,5 @@ main h2 {
   border-radius: 14px;
   overflow: hidden;
   padding: 20px;
+  background-color: #fff;
 }
