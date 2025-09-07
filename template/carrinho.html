@@ -43,11 +43,12 @@
         </nav>
     </header>
 
+    <!-- CONTEÚDO -->
     <main class="container my-5">
 
         <!-- Carrinho -->
         <section class="card card-carrinho shadow-lg">
-            <div class="card-header bg-warning text-dark">
+            <div class="card-header bg-info text-white">
                 <h4 class="mb-0">🛒 Meu Carrinho</h4>
             </div>
 
@@ -63,21 +64,27 @@
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
-                    <tbody id="resumoPedido">
+                    <tbody id="listaCarrinho">
                         <!-- Produtos serão preenchidos via JS -->
                     </tbody>
                 </table>
             </div>
 
-            <!-- Footer com total e botão -->
-            <div class="card-footer d-flex justify-content-between align-items-center bg-light">
-                <h5>Total: R$ <span id="valorTotal">0,00</span></h5>
-                <button id="btnConfirmar" class="btn btn-success btn-lg" disabled>Finalizar Pedido ➡</button>
+            <!-- Footer com total e botões -->
+            <div class="card-footer d-flex justify-content-between align-items-center bg-light flex-wrap gap-2">
+                <h5>Total: R$ <span id="totalCarrinho">0,00</span></h5>
+                <div class="d-flex gap-2">
+                    <a href="/mini-mercado/index.html" class="btn btn-outline-secondary">
+                        ⬅ Continuar Comprando
+                    </a>
+                    <a href="/mini-mercado/template/agendamento.html" class="btn btn-success btn-lg">
+                        Finalizar Pedido ➡
+                    </a>
+                </div>
             </div>
+
         </section>
-
     </main>
-
 
     <!-- RODAPÉ -->
     <footer class="footer bg-dark text-light text-center p-4 mt-5">

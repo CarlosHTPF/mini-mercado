@@ -355,3 +355,25 @@ main h2 {
     color: #fff;
     border-color: #ffc107;
 }
+
+/* Card do carrinho */
+.card-carrinho {
+    max-width: 900px;
+    margin: 0 auto; /* centraliza o card */
+}
+
+/* Tabela do carrinho */
+.card-carrinho table {
+    margin-bottom: 0; /* remove espaço extra */
+}
+
+.card-carrinho thead th,
+.card-carrinho tbody td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Footer e botões */
+.card-footer a.btn {
+    min-width: 150px;
+}
