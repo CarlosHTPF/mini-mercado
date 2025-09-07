@@ -281,7 +281,6 @@ main h2 {
 /*card carrinho*/
 .cart-container {
     position: relative;
-    min-height: 400px;
     padding-bottom: 70px;
 }
 
