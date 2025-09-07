@@ -337,3 +337,8 @@ main h2 {
 .botao-finalizar-container {
   flex-shrink: 0;
 }
+
+#agenda .card {
+    max-height: 150px; 
+    overflow: hidden; 
+}
