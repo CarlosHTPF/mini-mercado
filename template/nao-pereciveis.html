@@ -52,7 +52,8 @@
                 <!-- Arroz -->
                 <div class="col-md-3 col-sm-6">
                     <div class="card h-100 text-center">
-                        <img src="/mini-mercado/imagens/arroz.jpeg" class="card-img-top" alt="Pacote de arroz branco 5kg por R$ 20,00">
+                        <img src="/mini-mercado/imagens/arroz.jpeg" class="card-img-top"
+                            alt="Pacote de arroz branco 5kg por R$ 20,00">
                         <div class="card-body">
                             <h5 class="card-title">Arroz 5kg</h5>
                             <p class="card-text text-success fw-bold">R$ 20,00</p>
@@ -64,7 +65,8 @@
                 <!-- Feijão -->
                 <div class="col-md-3 col-sm-6">
                     <div class="card h-100 text-center">
-                        <img src="/mini-mercado/imagens/feijao.jpg" class="card-img-top" alt="Pacote de feijão carioca 1kg por R$ 7,00">
+                        <img src="/mini-mercado/imagens/feijao.jpg" class="card-img-top"
+                            alt="Pacote de feijão carioca 1kg por R$ 7,00">
                         <div class="card-body">
                             <h5 class="card-title">Feijão 1kg</h5>
                             <p class="card-text text-success fw-bold">R$ 7,00</p>
@@ -118,6 +120,23 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/mini-mercado/js/carrinho.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const botoes = document.querySelectorAll(".btn-add");
+
+            botoes.forEach(botao => {
+                botao.addEventListener("click", () => {
+                    const card = botao.closest(".card");
+                    const nome = card.querySelector(".card-title").textContent;
+                    const precoTexto = card.querySelector(".card-text").textContent;
+                    const preco = parseFloat(precoTexto.replace("R$", "").replace(",", "."));
+
+                    adicionarAoCarrinho(nome, preco, 1);
+                    alert(`${nome} adicionado ao carrinho!`);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
