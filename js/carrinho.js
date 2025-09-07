@@ -32,7 +32,7 @@ function renderizarCarrinho() {
     lista.appendChild(li);
   });
 
-  totalSpan.textContent = total.toFixed(2);
+  totalEl.textContent = total.toFixed(2);
 }
 
 // Adicionar item ao carrinho
