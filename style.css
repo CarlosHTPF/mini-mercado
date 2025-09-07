@@ -303,7 +303,8 @@ main h2 {
 }
 
 .card-agendamento {
-  height: 200px;
+  min-height: 400px;
+  height: auto;
   border-radius: 14px;
   overflow: hidden;
   padding: 20px;
