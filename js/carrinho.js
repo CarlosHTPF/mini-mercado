@@ -14,6 +14,8 @@ function renderizarCarrinho() {
   const totalSpan = document.getElementById("totalCarrinho");
   let carrinho = carregarCarrinho();
 
+  if (!lista || !totalEl) return;
+
   lista.innerHTML = "";
   let total = 0;
 
