@@ -408,3 +408,8 @@ main h2 {
   background-color: #d4ac0d !important;
   color: #fff !important;
 }
+
+/*ajuste card servicos*/
+.card-altura {
+  height: 350px;
+}
