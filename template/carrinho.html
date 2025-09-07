@@ -43,29 +43,40 @@
         </nav>
     </header>
 
-    <!-- CONTEÚDO -->
-<main class="container my-5">
-    <div class="card shadow-lg cart-container">
-        <div class="card-header bg-info text-white">
-            <h4 class="mb-0">Meu Carrinho</h4>
-        </div>
+    <main class="container my-5">
 
-        <div class="card-body cart-items">
-            <ul id="listaCarrinho" class="list-group mb-3"></ul>
-            <h5 class="text-right fixed-bottom mb-5">Total: R$ <span id="totalCarrinho">0,00</span></h5>
-        </div>
+        <!-- Carrinho -->
+        <section class="card card-carrinho shadow-lg">
+            <div class="card-header bg-warning text-dark">
+                <h4 class="mb-0">🛒 Meu Carrinho</h4>
+            </div>
 
-        <div class="cart-footer d-flex justify-content-between">
-            <a href="/mini-mercado/index.html" class="btn btn-outline-secondary">
-                ⬅ Continuar Comprando
-            </a>
-            <a href="/mini-mercado/template/agendamento.html" class="btn btn-success btn-lg">
-                Finalizar Pedido ➡
-            </a>
-        </div>
-    </div>
-</main>
+            <!-- Tabela de produtos -->
+            <div class="card-body p-0">
+                <table class="table table-hover m-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Subtotal</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resumoPedido">
+                        <!-- Produtos serão preenchidos via JS -->
+                    </tbody>
+                </table>
+            </div>
 
+            <!-- Footer com total e botão -->
+            <div class="card-footer d-flex justify-content-between align-items-center bg-light">
+                <h5>Total: R$ <span id="valorTotal">0,00</span></h5>
+                <button id="btnConfirmar" class="btn btn-success btn-lg" disabled>Finalizar Pedido ➡</button>
+            </div>
+        </section>
+
+    </main>
 
 
     <!-- RODAPÉ -->
