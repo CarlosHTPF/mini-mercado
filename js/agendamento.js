@@ -1,67 +1,51 @@
 // Horários base (09:00 até 18:00)
-const horariosBase = [
-  "09:00", "10:00", "11:00", "12:00",
-  "13:00", "14:00", "15:00", "16:00",
-  "17:00", "18:00"
-];
-
-// Exemplo de horários ocupados (viria do backend futuramente)
+const horariosBase = ["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"];
 const horariosOcupados = {
   "2025-09-07": ["10:00", "15:00"],
   "2025-09-08": ["09:00", "14:00"]
 };
 
-// Variáveis globais
 let valorBase = 0;
 let horarioSelecionado = null;
 
-// Resumo do pedido
 const resumoPedido = document.getElementById("resumoPedido");
 const valorTotalSpan = document.getElementById("valorTotal");
-
-// 🔹 Carregar itens do carrinho no localStorage
 let itensPedido = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-// Se carrinho estiver vazio
 if (itensPedido.length === 0) {
   const li = document.createElement("li");
+  li.classList.add("list-group-item");
   li.textContent = "Nenhum item no carrinho.";
   resumoPedido.appendChild(li);
 } else {
   itensPedido.forEach(item => {
     const li = document.createElement("li");
+    li.classList.add("list-group-item");
     li.textContent = `${item.nome} (x${item.qtd}) - R$ ${(item.preco * item.qtd).toFixed(2)}`;
     resumoPedido.appendChild(li);
     valorBase += item.preco * item.qtd;
   });
 }
 
-// Função para atualizar total
 function atualizarTotal() {
   const tipoServico = document.getElementById("tipoServico").value;
   let total = valorBase;
-  if (tipoServico === "entrega") {
-    total += 5; // taxa de entrega
-  }
+  if (tipoServico === "entrega") total += 5;
   valorTotalSpan.textContent = total.toFixed(2);
 }
 
-// Atualiza valor quando muda o serviço
 document.getElementById("tipoServico").addEventListener("change", function () {
   const enderecoDiv = document.getElementById("enderecoEntregaDiv");
   enderecoDiv.classList.toggle("d-none", this.value !== "entrega");
   atualizarTotal();
 });
 
-// Atualiza valor inicial
 atualizarTotal();
 
-// Função para formatar data (YYYY-MM-DD)
 function formatDate(date) {
   return date.toISOString().split("T")[0];
 }
 
-// Função para gerar os próximos 7 dias
 function gerarAgenda() {
   const agendaDiv = document.getElementById("agenda");
   agendaDiv.innerHTML = "";
@@ -74,7 +58,6 @@ function gerarAgenda() {
     const dataFormatada = formatDate(data);
     const tituloDia = data.toLocaleDateString("pt-BR", { weekday: "long", day: "2-digit", month: "2-digit" });
 
-    // Card do dia
     const card = document.createElement("div");
     card.classList.add("card", "mb-3");
     const cardBody = document.createElement("div");
@@ -84,7 +67,6 @@ function gerarAgenda() {
     h5.textContent = tituloDia;
     cardBody.appendChild(h5);
 
-    // Container de horários
     const horariosDiv = document.createElement("div");
     horariosDiv.classList.add("d-flex", "flex-wrap");
 
@@ -106,7 +88,6 @@ function gerarAgenda() {
           btnConfirmar.disabled = false;
         };
       }
-
       horariosDiv.appendChild(btn);
     });
 
@@ -117,11 +98,8 @@ function gerarAgenda() {
 }
 
 const btnConfirmar = document.getElementById("btnConfirmar");
-
-// Gera a agenda logo ao carregar
 gerarAgenda();
 
-// Confirmar pedido
 btnConfirmar.addEventListener("click", () => {
   if (!horarioSelecionado) {
     alert("Selecione um horário disponível!");
@@ -129,14 +107,21 @@ btnConfirmar.addEventListener("click", () => {
   }
 
   const tipoServico = document.getElementById("tipoServico").value;
-  const endereco = document.getElementById("enderecoEntrega").value || "N/A";
+  const endereco = document.getElementById("enderecoEntrega").value.trim();
   const total = valorTotalSpan.textContent;
 
-  alert(
-    `✅ Pedido confirmado!\n\n` +
-    `Serviço: ${tipoServico === "entrega" ? "Tele-entrega" : "Retirada no local"}\n` +
-    `Endereço: ${endereco}\n` +
-    `Agendamento: ${horarioSelecionado}\n` +
-    `Total: R$ ${total}`
-  );
+  if (tipoServico === "entrega" && endereco === "") {
+    alert("Informe o endereço para a entrega!");
+    return;
+  }
+
+  document.getElementById("modalServico").textContent = tipoServico === "entrega" ? "Tele-entrega" : "Retirada no local";
+  document.getElementById("modalEndereco").textContent = tipoServico === "entrega" ? endereco : "Mercado Independência";
+  document.getElementById("modalHorario").textContent = horarioSelecionado;
+  document.getElementById("modalTotal").textContent = total;
+
+  const modal = new bootstrap.Modal(document.getElementById("modalConfirmacao"));
+  modal.show();
+
+  localStorage.removeItem("carrinho");
 });
