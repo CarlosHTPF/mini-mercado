@@ -76,7 +76,7 @@ function gerarAgenda() {
       const btn = document.createElement("button");
       btn.classList.add("btn", "m-1");
 
-      if (horariosOcupados[dataFormatada]?.includes(hora)) {
+      if (ehDomingo || horariosOcupados[dataFormatada]?.includes(hora)) {
         btn.classList.add("btn-secondary");
         btn.disabled = true;
         btn.textContent = hora + " (Indisponível)";
